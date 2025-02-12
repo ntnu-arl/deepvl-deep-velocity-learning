@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DeepVL: Dynamics and Inertial Measurements-based Deep Velocity Learning for Underwater Odometry.">
+  <meta name="keywords" content="Underwater, Visual-Inertial Odometry, Deep Learning, Deep Velocity Learning, DeepVL">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>DeepVL</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DeepVL: Dynamics and Inertial Measurements-based Deep Velocity Learning for Underwater Odometry</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.ntnu.no/ansatte/mohit.singh">Mohit Singh</a>,</span>
+            <span class="author-block">
+              <a href="https://www.ntnu.no/ansatte/konstantinos.alexis">Kostas Alexis</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">NTNU: Norges Teknisk-Naturvitenskapelige Universitet</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2502.07726v1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2502.07726v1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=ctcbrNu_N78&ab_channel=KostasAlexis"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon!)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/ntnu-arl/underwater-datasets"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset (Coming Soon!)</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop has-text-centered">
+    <div class="hero-body">
+      <h2 class="title is-3">DeepVL Method Overview</h2>
+      <img src="./static/images/Teaser.png"
+      alt="DeepVL Method Overview"/>
+      <!-- <h2 class="subtitle has-text-centered">
+        <span class="dnerf">DeepVL Method Overview and Experimental Results in Field</span>
+      </h2> -->
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This paper presents a learned model to predict the robot-centric velocity of an underwater robot through dynamics-aware proprioception. The method exploits a recurrent neural network using as inputs inertial cues, motor commands, and battery voltage readings alongside the hidden state of the previous time-step to output robust velocity estimates and their associated uncertainty. An ensemble of networks is utilized to enhance the velocity and uncertainty predictions. Fusing the network's outputs into an Extended Kalman Filter, alongside inertial predictions and barometer updates, the method enables long-term underwater odometry without further exteroception. Furthermore, when integrated into visual-inertial odometry, the method assists in enhanced estimation resilience when dealing with an order of magnitude fewer total features tracked (as few as 1) as compared to conventional visual-inertial systems. Tested onboard an underwater robot deployed both in a laboratory pool and the Trondheim Fjord, the method takes less than 5ms for inference either on the CPU or the GPU of an NVIDIA Orin AGX and demonstrates less than 4% relative position error in novel trajectories during complete visual blackout, and approximately 2% relative error when a maximum of 2 visual features from a monocular camera are available.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ctcbrNu_N78?si=s3gyO62TvPvBbMZ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{singh2025deepvldynamicsinertialmeasurementsbased,
+      title={DeepVL: Dynamics and Inertial Measurements-based Deep Velocity Learning for Underwater Odometry}, 
+      author={Mohit Singh and Kostas Alexis},
+      year={2025},
+      eprint={2502.07726},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2502.07726}, }
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://www.arxiv.org/abs/2409.12074">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/ntnu-arl/underwater-datasets" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The website template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
